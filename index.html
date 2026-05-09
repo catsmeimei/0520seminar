@@ -34,11 +34,11 @@
   }
   .hero-free {
     display: inline-block;
-    background: linear-gradient(135deg, #e8619a, #c050c0);
+    background: linear-gradient(135deg, #06C755, #04a845);
     color: #fff; font-weight: 900;
     font-size: clamp(16px, 3.5vw, 22px);
     padding: 14px 36px; border-radius: 50px;
-    box-shadow: 0 6px 24px rgba(200,80,160,0.35);
+    box-shadow: 0 6px 24px rgba(6,199,85,0.4);
     margin-top: 32px;
     text-decoration: none;
   }
@@ -128,6 +128,15 @@
     font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
   }
 
+  /* 参加後の変化 */
+  .after-section { background: linear-gradient(180deg, #fff8fb 0%, #f0e8ff 100%); }
+  .after-lead { text-align: center; font-size: 15px; color: #7030a0; font-weight: 700; line-height: 1.9; margin-bottom: 24px; }
+  .after-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .after-card { background: #fff; border-radius: 14px; padding: 18px 14px; box-shadow: 0 3px 14px rgba(180,80,200,0.1); font-size: 13.5px; line-height: 1.75; color: #3a1a4a; }
+  .after-card .after-icon { font-size: 26px; display: block; margin-bottom: 8px; }
+  .after-card strong { font-size: 14px; color: #5a1a7a; display: block; margin-bottom: 4px; }
+  .after-bottom { text-align: center; margin-top: 24px; font-size: 15px; font-weight: 700; color: #b060d0; line-height: 1.9; }
+
   /* こんな方に */
   .target { background: linear-gradient(180deg, #faf0ff 0%, #fff5fa 100%); }
   .target-list { list-style: none; }
@@ -169,16 +178,20 @@
   .result-after .num { font-size: 34px; font-weight: 900; color: #ffe0f0; }
   .result-after .lbl { font-size: 11px; opacity: 0.85; margin-top: 2px; }
   .result-hero-sub { font-size: 12px; opacity: 0.8; margin-top: 12px; }
-  .achievement-box { background: linear-gradient(135deg, #fff0f7, #fce8f4); border-radius: 20px; padding: 32px 20px; text-align: center; margin: 24px 0; }
-  .achievement-eyebrow { font-size: 12px; color: #b060d0; letter-spacing: 1.5px; margin-bottom: 14px; }
-  .achievement-main { font-size: clamp(22px, 5.5vw, 30px); font-weight: 900; line-height: 1.45; color: #3a1a4a; margin-bottom: 16px; }
-  .achievement-main .pk { color: #e882b8; }
-  .achievement-sub { font-size: 14px; color: #7a5a8a; line-height: 1.85; margin-bottom: 22px; }
+  .achievement-box { background: linear-gradient(135deg, #ffe4f2 0%, #f0d8ff 100%); border-radius: 24px; padding: 40px 24px; text-align: center; margin: 24px 0; box-shadow: 0 6px 30px rgba(200,100,200,0.2); border: 1.5px solid #f0c0e8; }
+  .achievement-main { font-size: clamp(20px, 5.5vw, 30px); font-weight: 900; line-height: 1.5; color: #3a1a4a; margin-bottom: 6px; }
+  .achievement-main .pk { color: #e882b8; display: block; font-size: clamp(26px, 7vw, 40px); }
+  .achievement-speed { font-size: clamp(14px, 3.5vw, 18px); color: #9060b0; font-weight: 700; margin-bottom: 28px; }
+  .achievement-sub { font-size: 14px; color: #5a3a7a; line-height: 1.85; margin-bottom: 16px; }
+  .achievement-sub strong { font-size: clamp(17px, 4.5vw, 22px); color: #e8304a; display: block; margin-top: 4px; }
   .mini-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 4px; }
-  .mini-card { background: #fff; border-radius: 12px; padding: 14px 8px; }
+  .mini-card { background: #fff; border-radius: 14px; padding: 16px 8px; box-shadow: 0 3px 12px rgba(180,80,200,0.12); }
   .mini-badge { font-size: 11px; color: #e882b8; font-weight: 700; margin-bottom: 8px; }
-  .mini-lbl { font-size: 12px; color: #555; line-height: 1.7; }
-  .achievement-bottom { font-size: 14px; line-height: 1.9; color: #666; margin-top: 22px; text-align: center; }
+  .mini-name { font-size: 12px; color: #5a3a7a; font-weight: 700; margin-bottom: 4px; }
+  .mini-before { font-size: 13px; color: #555; }
+  .mini-arrow { font-size: 18px; color: #b060d0; font-weight: 900; margin: 4px 0; }
+  .mini-after { font-size: clamp(13px, 3vw, 15px); color: #3a1a4a; font-weight: 900; line-height: 1.5; }
+  .achievement-bottom { font-size: 14px; line-height: 1.9; color: #666; margin-top: 28px; text-align: center; }
   .achievement-bottom strong { font-size: clamp(18px, 4.5vw, 24px); display: block; margin-top: 10px; color: #7020b0; line-height: 1.6; }
 
   .results { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 0; }
@@ -270,18 +283,30 @@
     <h2 class="section-title">こんな風に、<span>感じて</span>いませんか？</h2>
     <ul class="pain-list">
       <li>
+        <div style="margin-bottom:8px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="21" fill="#fce8f4" stroke="#e8b8d8" stroke-width="1"/><circle cx="22" cy="20" r="12" fill="#f5d0c0"/><ellipse cx="22" cy="12" rx="13" ry="8" fill="#c060a0"/><path d="M16 19 Q18 21 20 19" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 19 Q26 21 28 19" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M17 25 Q22 23 27 25" stroke="#b07060" stroke-width="1.5" fill="none" stroke-linecap="round"/><text x="30" y="14" font-size="10" fill="#c090c0">…</text></svg>
+        </div>
         <p class="pain-head">どんなに行動しても、そこそこ止まり</p>
         <p class="pain-desc">毎日発信してる。自己投資もしてる。行動もできてる。でもなぜか、ずっとそこそこ止まり。「これだけやってるんだから、もっと成果出てもよくない？」って、心の中では思ってる。</p>
       </li>
       <li>
+        <div style="margin-bottom:8px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="21" fill="#fce8f4" stroke="#e8b8d8" stroke-width="1"/><circle cx="22" cy="20" r="12" fill="#f5d0c0"/><ellipse cx="22" cy="12" rx="13" ry="8" fill="#c060a0"/><path d="M15 18 Q18 16 21 18" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M23 18 Q26 16 29 18" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="18" cy="21" r="1.5" fill="#5a3a2a"/><circle cx="26" cy="21" r="1.5" fill="#5a3a2a"/><path d="M17 26 Q22 23 27 26" stroke="#b07060" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M28 14 L32 10" stroke="#c090c0" stroke-width="1.2" stroke-linecap="round"/><path d="M30 14 L34 14" stroke="#c090c0" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
         <p class="pain-head">ブロック外しもやった。でも全て「想定内」</p>
         <p class="pain-desc">潜在意識の書き換えも、ブロック外しも、一通りやり尽くした。売上も上がった。でも目標も成果も、全て想定内。SNSで突き抜けてる人を見るたびに「いいな、私も突き抜けたい！」って思ってる。</p>
       </li>
       <li>
+        <div style="margin-bottom:8px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="21" fill="#fce8f4" stroke="#e8b8d8" stroke-width="1"/><circle cx="22" cy="20" r="12" fill="#f5d0c0"/><ellipse cx="22" cy="12" rx="13" ry="8" fill="#c060a0"/><path d="M15 17 Q18 15 20 17" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 17 Q26 15 29 17" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="18" cy="21" r="1.5" fill="#5a3a2a"/><circle cx="26" cy="21" r="1.5" fill="#5a3a2a"/><path d="M17 27 Q22 24 27 27" stroke="#b07060" stroke-width="1.5" fill="none" stroke-linecap="round"/><ellipse cx="17" cy="24" rx="1.5" ry="2" fill="#88aaff" opacity="0.8"/></svg>
+        </div>
         <p class="pain-head">気になる講座があっても、お金が減るのが怖くてページを閉じてしまう</p>
         <p class="pain-desc">気になる講座を見つけても、すぐに頭をよぎる。「お金が減ったらどうしよう」「うまくいかなかったら怖い」と思って何度も開いては、閉じている。気づけばずっと、安全な範囲の中でしか動けなくなっている。</p>
       </li>
       <li>
+        <div style="margin-bottom:8px;">
+          <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="21" fill="#fce8f4" stroke="#e8b8d8" stroke-width="1"/><circle cx="22" cy="20" r="12" fill="#f5d0c0"/><ellipse cx="22" cy="12" rx="13" ry="8" fill="#c060a0"/><path d="M15 19 Q18 17 20 19" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M24 19 Q26 17 29 19" stroke="#7a4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="18" cy="22" r="1.5" fill="#5a3a2a"/><circle cx="26" cy="22" r="1.5" fill="#5a3a2a"/><path d="M17 27 Q22 25 27 27" stroke="#b07060" stroke-width="1.5" fill="none" stroke-linecap="round"/><line x1="10" y1="32" x2="34" y2="32" stroke="#e882b8" stroke-width="2" stroke-linecap="round" opacity="0.5"/><line x1="22" y1="30" x2="22" y2="34" stroke="#e882b8" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg>
+        </div>
         <p class="pain-head">毎日小さくブレーキを踏み続けている</p>
         <p class="pain-desc">理想の未来のためにもっと枠を広げたい。でも同時に、不安や恐れでブレーキを踏んでしまう。だからどれだけ整えても、学んでも、結果はいつもそこそこのラインで止まっている。</p>
       </li>
@@ -325,6 +350,36 @@
   </div>
 </div>
 
+<!-- 参加後の変化 -->
+<div class="after-section section">
+  <div class="section-inner">
+    <h2 class="section-title">参加後に<span>起きること</span></h2>
+    <p class="after-lead">「こんなに軽くていいの？」という感覚が、<br>じわじわとリアルになっていきます。</p>
+    <div class="after-grid">
+      <div class="after-card">
+        <span class="after-icon">🌸</span>
+        <strong>魂の喜びが腑に落ちる</strong>
+        好きなことをやるだけで売上が立つ感覚が、はじめてリアルに腑に落ちる
+      </div>
+      <div class="after-card">
+        <span class="after-icon">🕊️</span>
+        <strong>集客のイメージが変わる</strong>
+        セールスしなくても、魂が共鳴するクライアントが自然と集まるイメージが持てる
+      </div>
+      <div class="after-card">
+        <span class="after-icon">✨</span>
+        <strong>軽やかに稼げる未来が見える</strong>
+        ときめいて選ぶだけで、気づいたら売上が上がっていた——そんな未来が見えてくる
+      </div>
+      <div class="after-card">
+        <span class="after-icon">🚀</span>
+        <strong>静かな確信が生まれる</strong>
+        「私にもできる」じゃなく「これしかない」という、魂からの確信が生まれる
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- こんな方に -->
 <div class="target section">
   <div class="section-inner">
@@ -343,24 +398,30 @@
 <div class="section">
   <div class="section-inner">
     <div class="achievement-box">
-      <p class="achievement-eyebrow">6次元に飛び込んで2ヶ月後、起きたこと</p>
-      <p class="achievement-main">年商が、<span class="pk">月商になった。</span><br>しかも、想定外のスピードで。</p>
-      <p class="achievement-sub">
-        私だけじゃない。<br>
-        受講生さんも<strong style="color:#e8304a;font-size:18px;">最高月商を更新中！！</strong>
-      </p>
+      <p class="achievement-main">6次元に飛び込んで、<br>たった2ヶ月で<br><span class="pk">年商が月商に！！</span></p>
+      <p class="achievement-speed">しかも、想定外のスピードで。</p>
+      <p class="achievement-sub">私だけじゃない。<br><strong>受講生さんも、最高月商を更新中🔥</strong></p>
       <div class="mini-results">
         <div class="mini-card">
           <p class="mini-badge">🎉 最高月商 更新</p>
-          <p class="mini-lbl">Aさん<br>年商200万<br>→ 2ヶ月で700万</p>
+          <p class="mini-name">Aさん</p>
+          <p class="mini-before">年商200万</p>
+          <p class="mini-arrow">↓</p>
+          <p class="mini-after">2ヶ月で<br>700万達成</p>
         </div>
         <div class="mini-card">
           <p class="mini-badge">🎉 最高月商 更新</p>
-          <p class="mini-lbl">Bさん<br>売上ゼロ<br>→ 77万達成</p>
+          <p class="mini-name">Bさん</p>
+          <p class="mini-before">2年間売上ゼロ</p>
+          <p class="mini-arrow">↓</p>
+          <p class="mini-after">77万<br>達成</p>
         </div>
         <div class="mini-card">
           <p class="mini-badge">🎉 最高月商 更新</p>
-          <p class="mini-lbl">Dさん<br>売上30万<br>→ 月7桁 3ヶ月連続達成</p>
+          <p class="mini-name">Dさん</p>
+          <p class="mini-before">売上30万</p>
+          <p class="mini-arrow">↓</p>
+          <p class="mini-after">月7桁<br>3ヶ月連続</p>
         </div>
       </div>
     </div>
@@ -466,6 +527,7 @@
   </p>
   <a href="https://lin.ee/rZYhOkF" class="cta-btn">公式LINEに登録して参加する</a>
   <p class="cta-note">登録後、開催詳細と参加URLが届きます</p>
+  <p style="font-size:16px;color:#fff;font-weight:900;margin-top:16px;letter-spacing:0.5px;">🎁 リアルタイム参加の方には特別プレゼントあります</p>
 </div>
 
 </body>
